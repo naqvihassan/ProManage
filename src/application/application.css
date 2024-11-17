@@ -1,0 +1,62 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.login-text .content {
+   -fx-background-color: #f5f5f5 ;
+   -fx-cursor:default ;
+}
+
+
+.email {
+	-fx-background-color: white;
+	   -fx-cursor:default ;
+	
+}
+.email .content {
+   -fx-background-color: white ;
+      -fx-cursor:default ;
+}
+
+.password {
+	-fx-background-color: white;
+	   -fx-cursor:default ;
+
+}
+
+.password .content {
+   -fx-background-color: white;
+      -fx-cursor:default;
+   
+}
+
+.login-button {
+    -fx-cursor: HAND; /* Changes cursor to a pointer */
+}
+
+.nav-button {
+	-fx-cursor: HAND;
+	-fx-background-color: white;
+}
+
+.nav-button.active{
+	-fx-text-fill:  #4f46E5;
+	-fx-background-color: #f5f5f5; /* New color when hovered */
+}
+
+
+.nav-button:hover {
+    -fx-background-color: #f5f5f5; /* New color when hovered */
+}
+
+.right-border {
+    -fx-border-color: transparent black transparent transparent; /* Apply red color to the right */
+    -fx-border-width: 0 0.5px 0 0; /* Apply 2px width to the right border */
+}
+
+.user-name{
+	 -fx-background-color: white;
+    -fx-border-color: white;  /* Remove border if needed */
+}
+
+.user-name:focused {
+    -fx-background-color: white;
+        -fx-border-color: white;  /* Remove border if needed */
+}

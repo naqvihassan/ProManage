@@ -1,0 +1,17 @@
+# Ignore Eclipse files
+.settings/
+.classpath
+.project
+
+# Ignore build files
+bin/
+build.fxbuild
+
+# Ignore miscellaneous files
+*.log
+*.tmp
+
+# Ignore everything except src folder
+/*
+!.gitignore
+!/src/
