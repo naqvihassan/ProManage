@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="639.0" prefWidth="1241.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Client.ClientUIController">
+<AnchorPane prefHeight="639.0" prefWidth="1241.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Admin.AdminUIController">
    <children>
       <!-- Top Header AnchorPane -->
       <AnchorPane layoutX="297.0" prefHeight="70.0" prefWidth="1081.0" style="-fx-background-color: white;">
          <children>
-            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="41.0" fitWidth="39.0" layoutX="29.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../default-user.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="name" layoutX="77.0" layoutY="24.0" prefHeight="17.0" prefWidth="116.0" styleClass="user-name" text="Taha Mahmood">
+            <Label fx:id="name" layoutX="89.0" layoutY="25.0" prefHeight="21.0" prefWidth="173.0" styleClass="user-name" text="Hassan Naqvi">
                <font>
                   <Font name="Yu Gothic UI Semibold" size="15.0" />
                </font>
             </Label>
-            <Button layoutX="877.0" layoutY="20.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #4f46E5;" styleClass="login-button" text="Log Out" textFill="WHITE">
+            <Button fx:id="logoutbtn" layoutX="877.0" layoutY="20.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #4f46E5;" styleClass="login-button" text="Log Out" textFill="WHITE">
                <font>
                   <Font name="Yu Gothic UI Semibold" size="13.0" />
                </font>
@@ -68,6 +68,11 @@
                   <Font size="22.0" />
                </font>
             </Label>
+            <Button fx:id="button6" layoutX="28.0" layoutY="512.0" mnemonicParsing="false" onAction="#handleButton6Click" prefHeight="61.0" prefWidth="228.0" style="-fx-background-radius: 8;" styleClass="nav-button" text="Add Client">
+               <font>
+                  <Font name="Yu Gothic UI Semibold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
 

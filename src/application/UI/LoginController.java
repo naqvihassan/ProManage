@@ -2,6 +2,8 @@ package application.UI;
 
 import application.BL.LoginBL;
 
+
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,19 +14,15 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.event.ActionEvent;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 public class LoginController {
-
-    private static final String URL = "jdbc:sqlserver://127.0.0.1;databaseName=promanage;integratedSecurity=true;encrypt=true;trustServerCertificate=true;";
-
     @FXML
     private TextField emailField;
     @FXML
     private TextField passwordField;
+    
+    private static int loggedInUserId;
+    private static String loggedInUserType;
 
     @FXML
     public void handleLogin(ActionEvent event) {
@@ -35,24 +33,33 @@ public class LoginController {
             showAlert("Error", "Email and password cannot be empty.", Alert.AlertType.ERROR);
             return;
         }
-
+        
+        int userId = LoginBL.getUserIdByEmailAndPassword(email, password);
         String userType = LoginBL.loginUser(email, password);
 
-        if (userType == null) {
+        if (userType == null || userId == -1) {
             showAlert("Login Failed", "Email or password is incorrect.", Alert.AlertType.ERROR);
             return;
         }
+        loggedInUserType = userType;
+        loggedInUserId = userId;
 
         if ("client".equalsIgnoreCase(userType)) {
-            openForm(event, "/application/UI/Client/ClientUI.fxml", "Client Dashboard");
+            openForm(event, "/application/UI/Client/ClientUI.fxml", "Client Interface");
         } else if ("admin".equalsIgnoreCase(userType)) {
-            openForm(event, "/application/UI/Admin/AdminUI.fxml", "Admin Dashboard");
+            openForm(event, "/application/UI/Admin/AdminUI.fxml", "Admin Interface");
         }
     }
     
+    public static int getLoggedInUserId() {
+        return loggedInUserId;
+    }
     
+    public static String getLoggedInUseType() {
+    	return loggedInUserType;
+    }
 
-    private void openForm(ActionEvent event, String fxmlPath, String title) {
+    public void openForm(ActionEvent event, String fxmlPath, String title) {
         try {
             // Load the FXML file using the package structure
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlPath));

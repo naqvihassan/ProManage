@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="569.0" prefWidth="1065.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Client.MeetingsController">
+<AnchorPane prefHeight="564.0" prefWidth="1065.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Admin.AdminMeetingsController">
    <children>
       <Label layoutX="41.0" layoutY="14.0" text="All Meetings">
          <font>
@@ -83,11 +83,16 @@
       </AnchorPane>
       
       <!-- Scrollable task list container -->
-      <ScrollPane layoutX="41.0" layoutY="186.0" prefHeight="379.0" prefWidth="916.0">
+      <ScrollPane layoutX="41.0" layoutY="186.0" prefHeight="376.0" prefWidth="916.0">
          <content>
 		<VBox fx:id="taskListContainer" minHeight="400.0" spacing="10" />
          </content>
       </ScrollPane>
+      <Button fx:id="sm" layoutX="823.0" layoutY="75.0" mnemonicParsing="false" onAction="#ScheduleMeeting" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #4f46E5; -fx-background-radius: 0; -fx-cursor: HAND" text="Create a Meeting" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+      </Button>
       
    </children>
 </AnchorPane>

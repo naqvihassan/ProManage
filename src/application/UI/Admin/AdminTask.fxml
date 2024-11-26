@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="571.0" prefWidth="1065.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Client.TasksController">
+<AnchorPane prefHeight="592.0" prefWidth="1065.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Admin.AdminTasksController">
    <children>
       <Label layoutX="41.0" layoutY="14.0" text="All Tasks">
          <font>
@@ -59,7 +59,7 @@
                   <Font name="Yu Gothic UI Semibold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="196.0" layoutY="19.0" prefHeight="27.0" prefWidth="97.0" text="SUPERVISOR">
+            <Label layoutX="220.0" layoutY="20.0" prefHeight="27.0" prefWidth="97.0" text="CLIENT">
                <font>
                   <Font name="Yu Gothic UI Semibold" size="16.0" />
                </font>
@@ -73,11 +73,16 @@
       </AnchorPane>
       
       <!-- Scrollable task list container -->
-      <ScrollPane layoutX="41.0" layoutY="186.0" prefHeight="380.0" prefWidth="916.0">
+      <ScrollPane layoutX="41.0" layoutY="186.0" prefHeight="377.0" prefWidth="916.0">
          <content>
 		<VBox fx:id="taskListContainer" minHeight="400.0" spacing="10" />
          </content>
       </ScrollPane>
+      <Button fx:id="createTask" layoutX="850.0" layoutY="75.0" mnemonicParsing="false" onAction="#CreateTask" prefHeight="31.0" prefWidth="106.0" style="-fx-background-color: #4f46E5; -fx-background-radius: 0; -fx-cursor: HAND" text="Create a Task" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic UI Semibold" size="14.0" />
+         </font>
+      </Button>
       
    </children>
 </AnchorPane>

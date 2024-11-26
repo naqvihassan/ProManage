@@ -1,4 +1,4 @@
-package application.UI.Client;
+package application.UI.Admin;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
-public class DashboardController extends BaseDashboardController{
+public class AdminDashboardController extends BaseDashboardController{
 	
 	@FXML
     private Label tasksAssigned;
@@ -33,7 +33,7 @@ public class DashboardController extends BaseDashboardController{
     @FXML
     private Button first, second, third;
     
-    private ClientUIController c;
+    private AdminUIController c;
     
     @FXML
     public void initialize() {
@@ -41,8 +41,8 @@ public class DashboardController extends BaseDashboardController{
     	getTodayTasks();
     	getWeekTasks();
     }
-    public void setDashboardController(ClientUIController c) {
-    	this.c = c;
+    public void setDashboardController(AdminUIController adminUIController) {
+    	this.c = adminUIController;
     }
 
     public void get7daysData() {

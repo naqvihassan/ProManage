@@ -1,4 +1,9 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+button{
+	-fx-cursor: HAND;
+}
+
 .login-text .content {
    -fx-background-color: #f5f5f5 ;
    -fx-cursor:default ;
@@ -31,6 +36,7 @@
     -fx-cursor: HAND; /* Changes cursor to a pointer */
 }
 
+
 .nav-button {
 	-fx-cursor: HAND;
 	-fx-background-color: white;
@@ -59,4 +65,161 @@
 .user-name:focused {
     -fx-background-color: white;
         -fx-border-color: white;  /* Remove border if needed */
+}
+
+/* Apply styles to task title */
+.task-title {
+    -fx-font-size: 17px;
+    -fx-font-family: "Arial";
+    -fx-font-style: italic;
+    -fx-pref-width: 200px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+    -fx-padding: 0 0 0 10px; /* Add 10px padding to the left */
+}
+
+.notification-message {
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial";
+    -fx-pref-width: 500px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+    -fx-padding: 0 0 0 10px; /* Add 10px padding to the left */
+}
+
+.meeting-purpose{
+	 -fx-font-size: 17px;
+    -fx-font-family: "Arial";
+    -fx-font-style: italic;
+    -fx-pref-width: 160px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+    -fx-padding: 0 0 0 10px; /* Add 10px padding to the left */
+}
+.meeting-space-label{
+	 -fx-pref-width: 20px;  /* Fixed width */
+}
+
+
+.meeting-status-cancelled {
+    -fx-background-color: #f5dab5;
+    -fx-text-fill: #fcb34e;
+    -fx-background-radius: 20px; /* Set the background radius */
+    -fx-padding: 2px 10px;  /* Add some padding */
+    -fx-font-size: 11px;   /* Adjust font size */
+    -fx-pref-width: 90px;
+    -fx-text-alignment: center;
+    -fx-alignment: center; /* Center text horizontally and vertically */
+}
+
+.meeting-organizer{
+	 -fx-font-size: 17px;
+    -fx-font-family: "Arial";
+    -fx-font-style: italic;
+    -fx-pref-width: 160px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+    -fx-padding: 0 0 0 10px; /* Add 10px padding to the left */
+}
+/* Apply styles to task supervisor */
+.task-supervisor {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-pref-width: 150px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+}
+
+/* Apply styles to task deadline */
+.task-deadline {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: red;  /* Change color to red */
+    -fx-pref-width: 250px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+}
+
+
+.notification-time {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: red;  /* Change color to red */
+    -fx-pref-width: 230px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+}
+
+.meeting-deadline {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: red;  /* Change color to red */
+    -fx-pref-width: 210px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+}
+
+.meeting-duration{
+	-fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;  /* Change color to red */
+    -fx-pref-width: 130px;  /* Fixed width */
+    -fx-wrap-text: true;    /* Allow wrapping of text */
+}
+
+.status-label-padding {
+    -fx-padding: 0 10px;  /* 0px top/bottom, 10px left/right */
+}
+/* Apply styles to task status */
+.task-status {
+    -fx-background-radius: 20px; /* Set the background radius */
+    -fx-padding: 2px 10px;  /* Add some padding */
+    -fx-text-fill: white; /* Ensure text is readable */
+    -fx-font-size: 11px;   /* Adjust font size */
+    -fx-pref-width: 90px;
+    -fx-text-alignment: center;
+    -fx-alignment: center; /* Center text horizontally and vertically */
+}
+
+.space-label{
+	    -fx-pref-width: 60px;  /* Fixed width */
+}
+
+
+.details-button {
+    -fx-background-color: #4f46e5; /* Primary button color */
+    -fx-text-fill: white; /* Text color */
+    -fx-padding: 2px 10px; /* Padding inside the button */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-font-size: 11px; /* Font size */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+.mark-as-read{
+	 -fx-background-color: #4f46e5; /* Primary button color */
+    -fx-text-fill: white; /* Text color */
+    -fx-padding: 2px 10px; /* Padding inside the button */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-font-size: 11px; /* Font size */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+}
+
+.details-button:hover {
+    -fx-background-color: #3b3bcf; /* Darker shade on hover */
+}
+
+/* For Missing status */
+.task-status-missing {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: #B91C1C;
+}
+
+/* For Pending status */
+.task-status-pending {
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: #374151;
+}
+
+/* For In Progress status */
+.task-status-inprogress {
+    -fx-background-color: #c5d9fc;
+    -fx-text-fill: #3f80f2;
+}
+
+/* For Completed status */
+.task-status-completed {
+    -fx-background-color: #DCFCE7;
+    -fx-text-fill: #15803D;
 }

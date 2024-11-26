@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="571.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Client.DashboardController">
+<AnchorPane prefHeight="574.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI.Admin.AdminDashboardController">
     <children>
         <!-- Dashboard Header -->
         <Label layoutX="41.0" layoutY="14.0" text="Dashboard">
@@ -115,14 +115,14 @@
         </AnchorPane>
         <!-- Task Lists -->
         <!-- Today's Tasks -->
-        <AnchorPane layoutX="41.0" layoutY="207.0" prefHeight="358.0" prefWidth="430.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+        <AnchorPane layoutX="41.0" layoutY="207.0" prefHeight="353.0" prefWidth="430.0" style="-fx-background-color: white; -fx-background-radius: 8;">
             <children>
                 <Label layoutX="26.0" layoutY="14.0" text="Today's Tasks">
                     <font>
                         <Font name="Arial Black" size="22.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutY="55.0" prefHeight="299.0" prefWidth="430.0">
+                <ScrollPane layoutY="55.0" prefHeight="307.0" prefWidth="430.0">
                     <content>
                         <VBox fx:id="todayTasks" spacing="10.0" />
                     </content>
@@ -130,14 +130,14 @@
             </children>
         </AnchorPane>
         <!-- This Week's Tasks -->
-        <AnchorPane layoutX="522.0" layoutY="207.0" prefHeight="358.0" prefWidth="430.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+        <AnchorPane layoutX="522.0" layoutY="207.0" prefHeight="353.0" prefWidth="430.0" style="-fx-background-color: white; -fx-background-radius: 8;">
             <children>
                 <Label layoutX="26.0" layoutY="14.0" text="This Week's Tasks">
                     <font>
                         <Font name="Arial Black" size="22.0" />
                     </font>
                 </Label>
-                <ScrollPane layoutY="55.0" prefHeight="299.0" prefWidth="430.0">
+                <ScrollPane layoutY="55.0" prefHeight="307.0" prefWidth="430.0">
                     <content>
                         <VBox fx:id="weekTasks" spacing="10.0" />
                     </content>
